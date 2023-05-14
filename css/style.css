@@ -1,0 +1,175 @@
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--off-white);
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app .container {
+    background-color: var(--white);
+    width: 700px;
+    padding: 50px;
+    border-radius: 20px 20px 100px;
+}
+
+
+.app .nums-inputs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.app .nums-inputs .input {
+    margin-right: 25px;
+}
+
+.app .nums-inputs .input label {
+    display: block;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--smokey-grey);
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.app .nums-inputs input {
+    font-size: 32px;
+    font-weight: 700;
+    width: 150px;
+    height: 70px;
+    padding: 20px;
+    padding-right: 0;
+    caret-color: var(--purple);
+    border-radius: 10px;
+    border: 2px solid var(--light-grey);
+    margin: 6px 0 6px -4px;
+    transition: .2s;
+}
+
+.app .nums-inputs input:focus {
+    outline: none;
+    border-color: var(--purple)
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.app .nums-inputs .input small {
+    display: block;
+    color: var(--light-red);
+    font-size: 13px;
+    display: none;
+}
+
+.app .submit {
+    display: flex;
+    align-items: center;
+}
+
+.app .submit hr {
+    width: 100%;
+}
+
+.app .submit img {
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    background-color: var(--purple);
+}
+
+.app .submit img:hover {
+    background-color: var(--off-black);
+}
+
+.app .content > h1 {
+    font-size: 55px;
+    font-weight: 800;
+}
+
+.app .content > h1 span {
+    color: var(--purple);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+@media(max-width: 600px) {
+    .app .container {
+        width: 400px;
+    }
+
+    .app .nums-inputs {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .app .nums-inputs .input {
+        margin-right: 15px;
+    }
+
+    .app .nums-inputs .input input {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .app .nums-inputs .input small {
+        font-size: 12px;
+    }
+
+    .app .submit {
+        margin-top: 70px;
+        display: block;
+    }
+
+    .app .submit img {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .app .content > h1 {
+        font-size: 50px;
+    }
+}
